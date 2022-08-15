@@ -1,0 +1,32 @@
+body{
+
+height: 100vh;
+
+
+}
+
+
+
+.image{
+
+width: 40%;
+
+
+
+}
+
+.title{
+
+max-width: 80%;
+
+font-size: 7vw;
+
+}
+
+footer{
+
+background-color: rgb(33, 37, 41);
+color: white;
+height: 10vh;
+
+}

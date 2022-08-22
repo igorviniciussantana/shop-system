@@ -1,10 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;500;600;700&display=swap');
+
+*{
+    font-family: 'Josefin Sans', sans-serif;
+
+}
+
 body{
 
 height: 100vh;
+display: flex;
+flex-direction: column;
+background-color: #D7FFF1 !important;
+
+}
+
+.navbar{
+
+    background-color: #285943 !important; 
+
+
+
 
 
 }
 
+.nav-link, .navbar-brand{
+
+    color: #D7FFF1 !important;
+
+}
 
 
 .image{
@@ -15,18 +39,53 @@ width: 40%;
 
 }
 
+.container{
+
+height: 90vh;
+display: flex;
+align-items: center;
+justify-content: center;
+
+}
+
+
 .title{
 
 max-width: 80%;
 
 font-size: 7vw;
+color: #285943;
 
 }
 
 footer{
 
-background-color: rgb(33, 37, 41);
-color: white;
+background-color: #285943 ;
+color: #D7FFF1;
 height: 10vh;
+
+display: flex;
+align-items: center;
+justify-content: center;
+
+}
+
+footer h3{
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+}
+
+.navbar-toggler{
+border: none !important;
+
+
+}
+
+.navbar-toggler-icon{
+
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(215, 255, 241, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !important;
+
 
 }

@@ -18,6 +18,18 @@ app.get('/', (req, res)=>{
     res.render('home');
 })
 
+app.get('/cad_users', (req, res)=>{
+    res.render('cad_users');
+})
+
+app.get('/exibir_users', (req, res)=>{
+    res.render('exibir_users');
+})
+
+app.get('/editar_users', (req, res)=>{
+    res.render('editar_users');
+})
+
 app.listen(PORT, () => {
     console.log("Servidor rodando em localhost:" + PORT)
 })

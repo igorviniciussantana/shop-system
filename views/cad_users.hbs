@@ -1,15 +1,17 @@
-<div class="formulario px-5">
+<form class="formulario px-5" action="/insert_users" method="post">
 
 <h1 class="my-3">Formulário</h1>
 
         <!-- Início do Formulário -->
         <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Endereço de E-mail</label>
-            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+            <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com">
         </div>
         <div class="mb-3">
             <label for="exampleFormControlTextarea1" class="form-label">Mensagem</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            <textarea class="form-control" id="mensagem" name="mensagem" rows="3"></textarea>
         </div>
+
+        <button type="submit">Enviar</button> <button type="reset">Limpar</button>
         <!-- Fim do Formulário -->
-    </div>
+    </form>

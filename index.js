@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const hbs = require('express-handlebars');
+const bodyParser = require('body-parser')
 const PORT = process.env.PORT || 3000;
 
 //configuracao do handleBars
@@ -10,6 +11,7 @@ app.engine('hbs', hbs.engine({
 }));
 
 app.use('/', express.static('public'));
+app.use(bodyParser.urlencoded({extended:false}))
 app.set('view engine', 'hbs');
 
 //rota inicial
@@ -28,6 +30,13 @@ app.get('/exibir_users', (req, res)=>{
 
 app.get('/editar_users', (req, res)=>{
     res.render('editar_users');
+})
+
+
+app.post('/insert_users', (req,res)=>{
+
+console.log(req.body)
+
 })
 
 app.listen(PORT, () => {

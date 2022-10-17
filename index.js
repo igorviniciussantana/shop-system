@@ -1,7 +1,8 @@
 const express = require('express');
 const app = express();
 const hbs = require('express-handlebars');
-const bodyParser = require('body-parser')
+const bodyParser = require('body-parser');
+const Usuario = require('./models/Usuario');
 const PORT = process.env.PORT || 3000;
 
 //configuracao do handleBars
@@ -24,8 +25,26 @@ app.get('/cad_users', (req, res)=>{
     res.render('cad_users');
 })
 
-app.get('/exibir_users', (req, res)=>{
-    res.render('exibir_users');
+app.get('/exibir_users', async (req, res)=>{
+    const retorna = await Usuario.findAll().then((valores) =>{
+
+if(valores.length > 0){
+
+return res.render('exibir_users', {NavActiveUsers:true, table:true,
+usuarios: valores.map(valores => valores.toJSON())})
+
+
+}else{
+    res.render('exibir_users',{NavActiveUsers:true,table:false})
+    console.log(valores)
+}
+    }).catch((err) => {
+
+console.log(`Houve um problema: ${err}`)
+
+
+    })
+    
 })
 
 app.get('/editar_users', (req, res)=>{
@@ -34,8 +53,24 @@ app.get('/editar_users', (req, res)=>{
 
 
 app.post('/insert_users', (req,res)=>{
+    console.log(req.body)
 
-console.log(req.body)
+var name = req.body.name;
+var email = req.body.email;
+var password = req.body.password;
+
+Usuario.create({
+    name: name,
+    email: email.toLowerCase(),
+    password: password
+}).then(function(){
+    console.log('Cadastro realizado com sucesso!');
+    return res.redirect('/exibir_users');
+}).catch(function(erro){
+    console.log(`Ops, deu erro: ${erro}`);
+})
+
+
 
 })
 

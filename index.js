@@ -74,6 +74,50 @@ Usuario.create({
 
 })
 
+app.post('/editar_users', (req,res) =>{
+
+var id = req.body.id
+Usuario.findByPk(id).then((dados)=>{
+return res.render('editar_users', {error: false, id: dados.id, name: dados.name, email: dados.email, password: dados.password})}).catch((err)=>{
+console.log(err);
+return res.render('editar_users', {error: true, problema:'Não é possível editar este registro'})
+
+
+})
+
+app.post('/update_users', (req, res)=>{
+var name = req.body.name;
+var email = req.body.email;
+var password = req.body.password;
+
+Usuario.update(
+{
+name: name,
+email: email.toLowerCase(),
+password: password
+},
+{ where: {
+id: req.body.id
+}
+}
+
+).then((resultado)=>{
+console.log(resultado)
+return res.redirect('/exibir_users')
+
+}).catch((err)=>{
+console.log(err)
+
+})
+
+
+
+})
+
+
+
+})
+
 app.listen(PORT, () => {
     console.log("Servidor rodando em localhost:" + PORT)
 })

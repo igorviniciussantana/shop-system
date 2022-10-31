@@ -118,6 +118,17 @@ console.log(err)
 
 })
 
+app.post("/delete_users", function(req,res){
+
+
+Usuario.destroy({where: {id: req.body.id}}).then((retorno)=>{
+return res.redirect('/exibir_users')
+}).catch((err)=>{
+    console.log(err)
+})
+})
+
+
 app.listen(PORT, () => {
     console.log("Servidor rodando em localhost:" + PORT)
 })

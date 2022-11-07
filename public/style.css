@@ -5,6 +5,11 @@
 
 }
 
+
+.img-thumb{
+    max-width: 50px;
+}
+
 body{
 
 min-height: 100vh;

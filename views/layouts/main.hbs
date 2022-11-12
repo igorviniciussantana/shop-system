@@ -20,7 +20,7 @@
     <!-- Inicio do Menu -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Lojão do Igor</a>
+            <a class="navbar-brand" href="/">Lojão do Igor</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -32,19 +32,29 @@
                         <a class="nav-link active" aria-current="page" href="/">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="pages/form.html">Formulário</a>
+                        <a class="nav-link" href="/cad_produtos">Produtos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/cad_users">Contato</a>
+                    </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="/cad_users">Login</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
-                            Categorias
+                            Gestão
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Roupas</a></li>
-                            <li><a class="dropdown-item" href="#">Móveis</a></li>
+                             <li><h3 class="mx-1">Usuários</h3></li>
+                            <li><a class="dropdown-item" href="/exibir_users">Exibir Usuários</a></li>
+                            <li><a class="dropdown-item" href="/cad_users">Cadastro Usuários</a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
+                            <li><h3 class="mx-1">Produtos</h3></li>
+                            <li><a class="dropdown-item" href="/exibir_produtos">Exibir Produtos</a></li>
+                            <li><a class="dropdown-item" href="/cad_produtos">Cadastro Produtos</a></li>
 
                         </ul>
                     </li>

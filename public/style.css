@@ -5,12 +5,18 @@
 
 }
 
+
+.img-thumb{
+    max-width: 50px;
+}
+
 body{
 
-height: 100vh;
+min-height: 100vh;
 display: flex;
 flex-direction: column;
 background-color: #D7FFF1 !important;
+
 
 }
 
@@ -30,7 +36,12 @@ background-color: #D7FFF1 !important;
 
 }
 
+.conteudo{
 
+min-height: 85vh;
+
+
+}
 .image{
 
 width: 40%;
@@ -41,7 +52,7 @@ width: 40%;
 
 .container{
 
-height: 90vh;
+min-height: 90vh;
 display: flex;
 align-items: center;
 justify-content: center;
@@ -68,6 +79,7 @@ display: flex;
 align-items: center;
 justify-content: center;
 
+
 }
 
 footer h3{
@@ -88,4 +100,9 @@ border: none !important;
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(215, 255, 241, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !important;
 
 
+}
+
+.formulario{
+
+    min-height: 84.5vh;
 }

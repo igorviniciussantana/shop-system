@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;500;600;700&display=swap');
+@import url('https://api.fontshare.com/v2/css?f[]=satoshi@700,500,300,400&f[]=zodiak@700,800,400,900,300&display=swap');
 
 *{
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Zodiak', serif;
 
 }
 
@@ -13,14 +13,50 @@
 body{
 
 min-height: 100vh;
+width: 100%;
 display: flex;
 flex-direction: column;
-background-color: #D7FFF1 !important;
+background: #EBEDFF url('./images/bg.jpg') !important;
+background-size: contain !important;
+background-position: right bottom !important;
+background-repeat: no-repeat !important;
 
 
 }
 
-.navbar{
+.conteudo{
+    display: flex;
+    flex-direction: column;
+ 
+    justify-content: center;
+    padding-left: 2vw;
+    height: 85vh;
+}
+
+.nav-link{
+font-family: 'Satoshi' !important;
+}
+
+.title{
+
+max-width: 50%;
+color: #202028;
+font-size: clamp(1rem, 5vw, 4rem);
+
+}
+
+
+.navbar-brand{
+
+    font-size: clamp(1rem, 3vw, 3rem) !important;
+    font-weight: 700;
+    margin-left: 2vw;
+
+}
+
+
+
+/* .navbar{
 
     background-color: #285943 !important; 
 
@@ -105,4 +141,4 @@ border: none !important;
 .formulario{
 
     min-height: 84.5vh;
-}
+} */

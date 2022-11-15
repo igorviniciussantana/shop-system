@@ -1,14 +1,8 @@
+const env = process.env.NODE_ENV || 'development';
+const config = require(__dirname + '/../config/config.js')[env];
+
 const Sequelize = require('sequelize');
-const sequelize = new Sequelize('bd_loja','root','',{
-    host: 'localhost',
-    dialect: 'postgres',
-    define: {
-        charset: 'utf8',
-        collate: 'utf8_general_ci',
-        timestamps: true
-    },
-    logging: false
-})
+const sequelize = new Sequelize(config.db_database, config.db_username, config.db_password, config)
 
 sequelize.authenticate().then(function(){
     console.log('Conectando no banco com sucesso');

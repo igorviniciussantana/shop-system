@@ -1,7 +1,7 @@
-<div class="p-5 rounded mt-3">
+<div class="p-5 table-responsive  rounded mt-3">
   <h1>Lista Usuários</h1>
   {{#if table}}
-  <table class="table table-striped">
+  <table class="table table-hover">
     <thead>
       <tr>
         <th scope="col">#ID</th>
@@ -17,17 +17,17 @@
         <td>{{name}}</td>
         <td>{{email}}</td>
         <td>
-          <div class="row g-1">
+          <div class="row">
             <div class="col-6 col-md-3">
               <form action="/editar_users" method="post">
               <input type="hidden" name="id" value="{{id}}">
-              <button class="w-100 btn btn-info">Editar</button>
+              <button class="btn btn-info">Editar</button>
               </form>
             </div>
-            <div class="col-6 col-md-3">
+            <div class="col-6 col-md-3 mx-1">
                 <form action="/delete_users" method="post">
                  <input type="hidden" name="id" value="{{id}}">
-              <button class="w-100 btn btn-danger">Deletar</button>
+              <button class="btn btn-danger">Deletar</button>
               </form>
             </div>
           </div>
